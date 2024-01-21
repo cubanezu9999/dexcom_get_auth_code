@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   res.send("Hello from express server.");
 });
 app.get("/callback", (req, res) => {
-  code = req.query.code;
+  code = req.query
 
   console.log(req.query);
 });
