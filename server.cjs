@@ -6,7 +6,7 @@ let code = "";
 app.get("/", (req, res) => {
   res.send("Hello from express server.");
 });
-app.post("/callback", (req, res) => {
+app.get("/callback", (req, res) => {
   code = req.query;
   console.log(req.query);
 });
