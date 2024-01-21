@@ -14,7 +14,7 @@ app.get("/callback", (req, res) => {
 });
 
 app.get("/getcode", (req, res) => {
-  res.send({ code: code });
+  res.send(code);
   code = "";
 });
 
