@@ -3,16 +3,19 @@ const app = express();
 require("dotenv").config();
 
 let code = "";
+
 app.get("/", (req, res) => {
   res.send("Hello from express server.");
 });
 app.get("/callback", (req, res) => {
   code = req.query;
+
   console.log(req.query);
 });
 
 app.get("/getcode", (req, res) => {
-  res.send(code);
+  res.send({ code: code });
+  code = "";
 });
 
 app.listen(process.env.PORT, () => {
