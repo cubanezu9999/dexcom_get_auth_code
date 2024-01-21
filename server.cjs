@@ -8,13 +8,13 @@ app.get("/", (req, res) => {
   res.send("Hello from express server.");
 });
 app.get("/callback", (req, res) => {
-  code = req.query;
+  code = req.query.code;
 
   console.log(req.query);
 });
 
 app.get("/getcode", (req, res) => {
-  res.send(JSON.stringify(code.code));
+  res.send(code);
   code = "";
 });
 
